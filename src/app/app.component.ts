@@ -1,10 +1,11 @@
-import { Component }      from '@angular/core';
-import { GithubService }  from './services/github/github.service';
-import { HttpModule }     from '@angular/http';
+import { Component }       from '@angular/core';
+import { GithubService }   from './services/github/github.service';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { HttpModule }      from '@angular/http';
 
 @Component({
   selector: 'my-app',
-  template: `<h1>Hello {{name}}</h1><profile></profile>`,
-  providers: [ GithubService, HttpModule ]
+  templateUrl: './app.component.html',
+  providers: [ GithubService, HttpModule, NavbarComponent ]
 })
-export class AppComponent  { name = 'Angular'; }
+export class AppComponent  {}
